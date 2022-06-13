@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="assets/css/game_uebersicht.css">
+</head>
+<body>
+
+    <script>
+        // Dieser Teil des Skripts ist da um die Fehlermeldung anzuzeigen
+        function printError(elemId, hintMsg) {
+            document.getElementById(elemId).innerHTML = hintMsg;
+        }
+
+        // Formular Validierung
+        function validateForm() {
+            // Die Variablen, welchem die Werte des Formulars zugeteilt werden
+            var vorname = document.formular1.vname.value;
+            var nachname = document.formular1.nname.value;
+            var wohnort = document.formular1.wohnort.value;
+
+            // Fehlermeldung -> Variablen definieren
+            var vnameErr = nnameErr = wohnortErr = true;
+
+            // Vorname validieren
+            if (vorname == "") {
+                printError("vnameErr", "Bitte Vornamen eingeben <br><br>");
+            }
+            else {
+                var regex = /^[a-zA-Z\s]+$/;
+                if (regex.test(vorname) == false) {
+                    printError("vnameErr", "Keine Zahlen oder Sonderzeichen verwenden <br><br>");
+                }
+                else {
+                    printError("vnameErr", "");
+                    vnameErr = false;
+                }
+            }
+
+            // Nachname validieren
+            if (nachname == "") {
+                printError("nnameErr", "Bitte Nachnamen eingeben <br><br>");
+            }
+            else {
+                var regex = /^[a-zA-Z\s]+$/;
+                if (regex.test(nachname) == false) {
+                    printError("nnameErr", "Keine Zahlen oder Sonderzeichen verwenden <br><br>");
+                }
+                else {
+                    printError("nnameErr", "");
+                    nnameErr = false;
+                }
+            }
+
+            // Wohnort validieren
+            if (wohnort == "") {
+                printError("wohnortErr", "Bitte Wohnort eingeben <br><br>");
+            }
+            else {
+                var regex = /^[a-zA-Z\s]+$/;
+                if (regex.test(wohnort) == false) {
+                    printError("wohnortErr", "Keine Zahlen oder Sonderzeichen verwenden <br><br>");
+                }
+                else {
+                    printError("wohnortErr", "");
+                    nnameErr = false;
+                }
+            }
+
+            // Wenn eines der Felder nicht richtig ausgefüllt ist, wird das Formular nicht gesendet
+            if ((vnameErr || nnameErr || wohnortErr) == true) {
+                return false;
+            }
+        }
+
+    </script>
+    <div class="alles">
+
+
+        <!-- Dies ist die Navbar -->
+        <ul class="navbar">
+            <li><a href="index.html" class="home">Home</a></li>
+            <li><a href="shop.html" class="galerie">Shop</a></li>
+            <li><a href="game_uebersicht.html" class="geschichte current">Game</a></li>
+            <li><a href="unser_team.html" class="unserteam">Das sind wir</a></li>
+        </ul>
+
+        
+        <!-- Der Titel und Untertitel -->
+        <div class="divider">
+            <h2 class="titel1">Hier kommt Form und Weiterleitung!!</h2>
+        </div>  
+        
+
+        
+        <div class="container1">
+            <form id="formular1" name="formular1" onsubmit="return validateForm()" action="php/ausgabe.php" method="POST">
+
+                <!-- Hier kommen die ganzen Eingabefelder, welche für das Formular verwendet werden -->
+                <label for="vname">Vorname:</label>
+                <input type="text" id="vname" name="vname" class="vname input1"  maxlength="20"><br><br>
+                <div class="error" id="vnameErr"></div>
+
+                <label for="nname">Nachname:</label>
+                <input type="text" id="nname" name="nname" class="nname input1" pattern="[a-zA-Z ]{3,}" maxlength="20" title="Cock and Balls"><br><br>
+                <div class="error" id="nnameErr"></div>
+
+                <label for="Wohnort" class="">Wohnort:</label>
+                <input type="text" name="wohnort" id="wohnort" class="wohnort input1"  maxlength="20"><br><br>
+                <div class="error" id="wohnortErr"></div>
+
+                <label for="email">E-Mail:</label>
+                <input type="email" name="email" id="email" class="email input1" required><br><br>
+
+                <label for="adresse">Adresse:</label>
+                <input type="text" name="adresse" id="adresse" class="adresse input1" required><br><br>
+
+
+
+                <!-- Hier kommen der Submitbutton und der Resetbutton, welche man für das Absenden bzw. zum zurücksetzen des Formulars verwendet -->
+                <input type="submit" name="submit1" id="sumbit1" value="Absenden" class="button1">
+                <input type="reset" name="reset1" id="reset1" value="Zurücksetzen" class="button1">
+
+
+            </form>
+        </div>
+
+
+    </div>  <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="footer">
+        <p class="text1 textfooter">Fidcuia </p>
+    </div>
+
+       
+</body>
+</html>
+
+<!-- Dieser Scritp-Abschnitt wurde verwendet um, wenn die Seite geladen wird, die Animationen der Navbar etc. nicht auszulösen. -->
+<script> </script>
