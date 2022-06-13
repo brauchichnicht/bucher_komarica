@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+
+/* Allgemeine Formatierung, heisst: Schriften (Schriftgrösse, Schriftart, Schriftfarbe etc.), Bodyfarbe etc. */
+body {
+    font-family: "Questrial", sans-serif;
+    background-color:  #222222;
+}
+
+.titel1 {
+    color: white;
+}
+
+.titel2 {
+    margin-bottom: 0;
+    color: white;
+}
+
+.text1 {
+    color: white;
+    width: 600px ;
+    margin: auto;
+    margin-top: 1%;
+}
+
+.textneu {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    width: 600px;
+}
+
+.text2 {
+    font-size: small;
+    color: white;
+}
+
+label {
+    color: white;
+}
+
+.alles {
+    text-align: center;
+}
+
+.divider {
+    border-bottom: 2px solid white;
+    border-radius: 3px;
+    width: 50%;
+    margin: auto;
+}
+
+
+/* Aussehens-Formatierung für die Navbar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 6px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+    align-content: center;
+    transition: ease .3s;
+}
+
+/* Wenn man über einem Button hovert, wird der Hintergrund in ein Schwarz abgeändert... Dies mit einer kleinen Animation */
+li a:hover {
+    background-color: #111;
+    transition: ease .3s;
+}
+
+/* Formatierung für die momentan ausgewählte Seite in der Navbar */
+.current {
+    text-decoration: overline;
+    color: #222222;
+    background-color: white;
+}
+
+.current:hover {
+    color: white;
+}
+
+/* Formatierung des Bildes */
+
+.bild3 {
+    overflow: hidden;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 1.5%;
+    border-radius: 20px;
+    box-shadow: 6px 6px 20px #111111;
+}
+
+.footer {
+    background-color: #444;
+    height: 30px;
+    color: white;
+    line-height: 30px;
+    border-radius: 6px;
+}
+
+.textfooter {
+    margin-left: 0.5%;
+}

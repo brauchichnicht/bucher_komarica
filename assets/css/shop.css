@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+/* Responsive Design */
+@media only screen and (max-width: 1024px) {
+    .allebilder {
+        flex-direction: column;
+    }
+    .bild3 {
+        width: 500px;
+    }
+}
+
+
+/* Allgemeine Formatierung, heisst: Schriften (Schriftgrösse, Schriftart, Schriftfarbe etc.), Bodyfarbe etc. */
+body {
+    font-family: "Questrial", sans-serif;
+    background-color:  #222222;
+}
+
+.titel1 {
+    color: white;
+}
+
+.text1 {
+    color: white;
+}
+
+.text2 {
+    font-size: small;
+    color: white;
+}
+
+label {
+    color: white;
+}
+
+.alles {
+    text-align: center;
+}
+
+.divider {
+    border-bottom: 2px solid white;
+    border-radius: 3px;
+    width: 50%;
+    margin: auto;
+}
+
+
+/* Aussehens-Formatierung für die Navbar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 6px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+    align-content: center;
+    transition: ease .3s;
+}
+
+/* Wenn man über einem Button hovert, wird der Hintergrund in ein Schwarz abgeändert... Dies mit einer kleinen Animation */
+li a:hover {
+    background-color: #111;
+    transition: ease .3s;
+}
+
+/* Formatierung für die momentan ausgewählte Seite in der Navbar */
+.current {
+    text-decoration: overline;
+    color: #222222;
+    background-color: white;
+}
+
+.current:hover {
+    color: white;
+}
+
+/* Formatierung der Bilder */
+
+.bild1 {
+    overflow: hidden;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 1.5%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px #111111;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bild1 img {
+    transition: transform .3s ease;
+}
+
+.bild1:hover img {
+    transform: scale(1.2);
+}
+
+.bild3 {
+    overflow: hidden;
+    max-width: 20%;
+    margin: auto;
+    margin-top: 1.5%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px #111111;
+}
+
+.bild3 img {
+    transition: transform .3s ease;
+}
+
+.bild3:hover img {
+    transform: scale(1.2);
+}
+
+.bild4 {
+    position: relative;
+    right:600px;
+}
+
+
+.allebilder {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.footer {
+    background-color: #444;
+    height: 30px;
+    color: white;
+    line-height: 30px;
+    border-radius: 6px;
+}
+
+.textfooter {
+    margin-left: 0.5%;
+}
