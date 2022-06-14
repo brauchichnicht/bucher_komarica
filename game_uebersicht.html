@@ -96,7 +96,7 @@
 
         
         <div class="container1">
-            <form id="formular1" name="formular1" onsubmit="return validateForm()" action="php/ausgabe.php" method="POST">
+            <form id="formular1" name="formular1" onsubmit="return validateForm()" action="game.html" method="POST">
 
                 <!-- Hier kommen die ganzen Eingabefelder, welche für das Formular verwendet werden -->
                 <label for="vname">Vorname:</label>
@@ -107,20 +107,11 @@
                 <input type="text" id="nname" name="nname" class="nname input1" pattern="[a-zA-Z ]{3,}" maxlength="20" title="Cock and Balls"><br><br>
                 <div class="error" id="nnameErr"></div>
 
-                <label for="Wohnort" class="">Wohnort:</label>
-                <input type="text" name="wohnort" id="wohnort" class="wohnort input1"  maxlength="20"><br><br>
-                <div class="error" id="wohnortErr"></div>
-
                 <label for="email">E-Mail:</label>
                 <input type="email" name="email" id="email" class="email input1" required><br><br>
 
-                <label for="adresse">Adresse:</label>
-                <input type="text" name="adresse" id="adresse" class="adresse input1" required><br><br>
-
-
-
                 <!-- Hier kommen der Submitbutton und der Resetbutton, welche man für das Absenden bzw. zum zurücksetzen des Formulars verwendet -->
-                <input type="submit" name="submit1" id="sumbit1" value="Absenden" class="button1">
+                <input type="submit" name="submit1" id="sumbit1" value="Absenden"  class="button1" href="https://www.w3schools.com/" target="_blank">
                 <input type="reset" name="reset1" id="reset1" value="Zurücksetzen" class="button1">
 
 
@@ -134,6 +125,8 @@
         <p class="text1 textfooter">Fidcuia </p>
     </div>
 
+<script> src="assets/js/database-client.js"</script>
+<script> src="assets/js/form.js"</script>
        
 </body>
 </html>
