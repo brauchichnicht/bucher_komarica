@@ -33,6 +33,7 @@ const jump = () => {
 
 const dieAnimation = () => {
   dino.classList.add("dino-dies")
+  
   return new Promise(resolve => setTimeout(() => {
     dino.classList.remove("dino-dies")
     resolve()
