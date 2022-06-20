@@ -8,7 +8,7 @@ const database = {
 const submit = document.getElementById("submit")
 const vorname = document.getElementById("vorname")
 const nachname = document.getElementById("nachname")
-const wohnort = document.getElementById("wohnort")
+const email = document.getElementById("email")
 submit.disabled = true
 
 
@@ -23,10 +23,10 @@ submit.disabled = true
             // Die Variablen, welchem die Werte des Formulars zugeteilt werden
             var vorname = document.formular1.vname.value;
             var nachname = document.formular1.nname.value;
-            var wohnort = document.formular1.wohnort.value;
+            var email = document.formular1.email.value;
 
             // Fehlermeldung -> Variablen definieren
-            var vnameErr = nnameErr = wohnortErr = true;
+            var vnameErr = nnameErr = emailErr = true;
 
             // Vorname validieren
             if (vorname == "") {
@@ -58,23 +58,23 @@ submit.disabled = true
                 }
             }
 
-            // Wohnort validieren
-            if (wohnort == "") {
-                printError("wohnortErr", "Bitte Wohnort eingeben <br><br>");
+            // E-Mail validieren
+            if (email == "") {
+                printError("emailErr", "Bitte E-Mail eingeben <br><br>");
             }
             else {
-                var regex = /^[a-zA-Z\s]+$/;
-                if (regex.test(wohnort) == false) {
-                    printError("wohnortErr", "Keine Zahlen oder Sonderzeichen verwenden <br><br>");
+                var regex = /^[a-zA-Z\s]+@.$/;
+                if (regex.test(email) == false) {
+                    printError("emailErr", "Bitte richtig eingeben <br><br>");
                 }
                 else {
-                    printError("wohnortErr", "");
+                    printError("emailErr", "");
                     nnameErr = false;
                 }
             }
 
             // Wenn eines der Felder nicht richtig ausgefüllt ist, wird das Formular nicht gesendet
-            if ((vnameErr || nnameErr || wohnortErr) == true) {
+            if ((vnameErr || nnameErr || emailErr) == true) {
                 return false;
             }
         }
@@ -83,7 +83,7 @@ submit.disabled = true
 
 submit.addEventListener("click", async (event) => {
     event.preventDefault()
-    const result = await databaseClient.insertInto("users", ["vorname","nachname""wohnort"], [vorname.value, nachname.value, wohnort.value])
+    const result = await databaseClient.insertInto("users", ["vorname","nachname""email"], [vorname.value, nachname.value, email.value])
     if (result.error) {
         alert("Datenbank Fehler: " + JSON.stringify(result.error, null, 2))
     }
