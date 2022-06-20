@@ -88,5 +88,3 @@ const startGameLoop = () => {
   }, 50)
 
 }
-
-
