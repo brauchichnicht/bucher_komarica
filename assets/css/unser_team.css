@@ -36,6 +36,10 @@ body {
     color: white;
 }
 
+.text3 {
+    color: white;
+}
+
 label {
     color: white;
 }
@@ -111,4 +115,23 @@ li a:hover {
 
 .textfooter {
     margin-left: 0.5%;
+}
+
+.bild1 {
+    overflow: hidden;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 1.5%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px #111111;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bild1 img {
+    transition: transform .3s ease;
+}
+
+.bild1:hover img {
+    transform: scale(1.2);
 }
