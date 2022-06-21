@@ -21,12 +21,12 @@ body {
   width: 75px;
   top: 225px;
   position: relative;
-  background-image: url("https://github.com/kriscfoster/chrome-dino-game/blob/master/dino.png?raw=true");
+  background-image: url("../../bilder/dino.png");
   background-size: cover;
 }
 
 .dino-dies {
-  background-color: red;
+background-color: red;
 }
 
 #rock {
@@ -35,7 +35,7 @@ body {
   position: relative;
   top: 175px;
   left: 550px;
-  background-image: url("https://github.com/kriscfoster/chrome-dino-game/blob/master/rock.png?raw=true");
+  background-image: url("../../bilder/rock.png");
   background-size: cover;
 }
 
@@ -81,7 +81,7 @@ body {
   position: absolute;
   width: 600px;
   height: 300px;
-  background-image: url("https://github.com/kriscfoster/chrome-dino-game/blob/master/background.jpg?raw=true");
+  background-image: url("../../bilder/background.jpg");
   background-size: cover;
 }
 
